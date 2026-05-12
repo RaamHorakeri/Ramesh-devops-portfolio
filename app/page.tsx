@@ -1,12 +1,24 @@
-# Ramesh DevOps Portfolio Website
-
 export default function Home() {
   const skills = {
     Cloud: ["AWS", "Azure", "DigitalOcean"],
-    DevOps: ["Docker", "Kubernetes", "Helm", "ArgoCD", "Terraform", "Ansible"],
+    DevOps: [
+      "Docker",
+      "Kubernetes",
+      "Helm",
+      "ArgoCD",
+      "Terraform",
+      "Ansible",
+    ],
     CICD: ["Jenkins", "GitLab CI/CD", "GitHub Actions"],
     Monitoring: ["Prometheus", "Grafana", "Loki", "Promtail"],
-    Tools: ["GitHub", "GitLab", "Bitbucket", "Nginx", "Linux", "Shell Scripting"],
+    Tools: [
+      "GitHub",
+      "GitLab",
+      "Bitbucket",
+      "Nginx",
+      "Linux",
+      "Shell Scripting",
+    ],
   }
 
   const projects = [
@@ -14,21 +26,29 @@ export default function Home() {
       title: "Kubernetes Managed Metrics System",
       description:
         "Built complete CI/CD pipeline using Jenkins, Docker, Kubernetes, Helm and AWS EKS with rolling updates and auto scaling.",
+      github: "https://github.com/RaamHorakeri",
+      live: "https://your-project-url.vercel.app",
     },
     {
       title: "Cloud Native DevOps Pipeline",
       description:
         "Implemented secure CI/CD with SonarQube, Trivy, Docker, Kubernetes, Prometheus and Grafana monitoring.",
+      github: "https://github.com/RaamHorakeri",
+      live: "https://your-project-url.vercel.app",
     },
     {
       title: "Docker Cleanup Automation",
       description:
         "Automated cleanup of unused Docker images, containers, networks and cache using Jenkins pipelines.",
+      github: "https://github.com/RaamHorakeri",
+      live: "https://your-project-url.vercel.app",
     },
     {
       title: "GitOps Deployment Automation",
       description:
         "Managed Kubernetes deployments using ArgoCD, Helm and GitOps workflows for DEV, QA and PROD environments.",
+      github: "https://github.com/RaamHorakeri",
+      live: "https://your-project-url.vercel.app",
     },
   ]
 
@@ -167,7 +187,9 @@ export default function Home() {
             <ul className="mt-6 space-y-3 text-gray-300 leading-7 list-disc pl-5">
               <li>Designed CI/CD pipelines using Jenkins and ArgoCD.</li>
               <li>Managed Kubernetes clusters with Helm and Rancher.</li>
-              <li>Implemented monitoring using Grafana, Loki and Prometheus.</li>
+              <li>
+                Implemented monitoring using Grafana, Loki and Prometheus.
+              </li>
               <li>Configured Nginx reverse proxy and SSL automation.</li>
               <li>Automated server operations using shell scripting.</li>
             </ul>
@@ -176,9 +198,7 @@ export default function Home() {
           <div className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800">
             <div className="flex flex-col md:flex-row md:justify-between md:items-center">
               <div>
-                <h3 className="text-2xl font-bold">
-                  Glintsoft Infotech
-                </h3>
+                <h3 className="text-2xl font-bold">Glintsoft Infotech</h3>
                 <p className="text-green-400 mt-2">DevOps Engineer</p>
               </div>
 
@@ -191,7 +211,9 @@ export default function Home() {
               <li>Built CI/CD pipelines using Jenkins and GitLab CI/CD.</li>
               <li>Migrated applications to Docker-based microservices.</li>
               <li>Managed Kubernetes workloads and namespaces.</li>
-              <li>Implemented infrastructure provisioning using Terraform.</li>
+              <li>
+                Implemented infrastructure provisioning using Terraform.
+              </li>
               <li>Automated operations using Bash scripting.</li>
             </ul>
           </div>
@@ -208,7 +230,7 @@ export default function Home() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 hover:border-green-500 transition"
+              className="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 hover:border-green-500 transition hover:scale-105 duration-300"
             >
               <h3 className="text-2xl font-bold mb-4 text-green-400">
                 {project.title}
@@ -217,6 +239,24 @@ export default function Home() {
               <p className="text-gray-300 leading-8">
                 {project.description}
               </p>
+
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="bg-green-500 text-black px-5 py-2 rounded-xl font-semibold hover:bg-green-400 transition"
+                >
+                  View CI/CD Setup
+                </a>
+
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className="border border-green-500 px-5 py-2 rounded-xl hover:bg-green-500 hover:text-black transition"
+                >
+                  Access Project
+                </a>
+              </div>
             </div>
           ))}
         </div>
